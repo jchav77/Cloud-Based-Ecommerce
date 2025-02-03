@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Julio's Clothing Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/api.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Julio's Clothing Shop</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Shop</a></li>
+            <li>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="products-container">
+        <div class="products-header">
+            <h1>Our Products</h1>
+            <div class="filters-section">
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All Products</button>
+                    <button class="category-btn" data-category="shirts">
+                        <i class="fas fa-tshirt"></i> Shirts
+                    </button>
+                    <button class="category-btn" data-category="shoes">
+                        <i class="fas fa-shoe-prints"></i> Shoes
+                    </button>
+                    <button class="category-btn" data-category="dresses">
+                        <i class="fas fa-female"></i> Dresses
+                    </button>
+                    <button class="category-btn" data-category="accessories">
+                        <i class="fas fa-glasses"></i> Accessories
+                    </button>
+                </div>
+                <div class="sort-filter">
+                    <select id="sort-select">
+                        <option value="default">Sort By</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="products-grid" class="products-grid">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Julio's Clothing Shop</h3>
+                <p>Premium fashion for everyone</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Julio's Clothing Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

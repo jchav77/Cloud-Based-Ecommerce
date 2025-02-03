@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julio's Clothing Shop- Contemporary Fashion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <svg class="brand-logo" width="40" height="40" viewBox="0 0 50 50">
+                <path d="M25 0 L50 25 L25 50 L0 25 Z" fill="currentColor"/>
+                <path d="M15 25 L35 25 M25 15 L25 35" stroke="white" stroke-width="2"/>
+            </svg>
+            Julio's ClothingShop
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li class="dropdown">
+                <a href="#" class="categories-btn">Categories <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="products.html?category=shirts">Shirts</a>
+                    <a href="products.html?category=shoes">Shoes</a>
+                    <a href="products.html?category=dresses">Dresses</a>
+                    <a href="products.html?category=accessories">Accessories</a>
+                </div>
+            </li>
+            <li>
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Julio's Clothing Shop</h1>
+                <p>Contemporary Fashion, Timeless Style</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="cta-button">
+                        <span>Shop Collection</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#featured" class="secondary-button">
+                        <i class="fas fa-star"></i>
+                        <span>View Featured</span>
+                    </a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Free Shipping</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-undo"></i>
+                        <span>Easy Returns</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Checkout</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-categories">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <a href="products.html?category=shirts" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Shirts</h3>
+                        <p>T-Shirts, Dress Shirts & Polos</p>
+                        <span class="category-items">3 Products</span>
+                        <span class="view-more">Shop Now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="products.html?category=shoes" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Shoes</h3>
+                        <p>Sneakers, Dress Shoes & Heels</p>
+                        <span class="category-items">3 Products</span>
+                        <span class="view-more">Shop Now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="products.html?category=dresses" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Dresses</h3>
+                        <p>Evening Gowns & Summer Dresses</p>
+                        <span class="category-items">3 Products</span>
+                        <span class="view-more">Shop Now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="products.html?category=accessories" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3>Accessories</h3>
+                        <p>Wallets, Bags & Sunglasses</p>
+                        <span class="category-items">3 Products</span>
+                        <span class="view-more">Shop Now <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="featured-products" class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="featured-grid">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Julio's Clothing Shop</h3>
+                <p>Contemporary Fashion, Timeless Style</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="#featured">Categories</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Julio's Clothing Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Julio's Clothing Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/cart.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">ShopNow</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li>
+                <a href="cart.html" class="cart-link active">
+                    Cart <span class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="cart-container">
+        <h1>Shopping Cart</h1>
+        
+        <div class="cart-layout">
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Shipping</span>
+                    <span id="shipping">$0.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Tax</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="cart-total-amount">$0.00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-button">
+                    <i class="fas fa-lock"></i> Proceed to Checkout
+                </button>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Julio's Clothing Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
