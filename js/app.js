@@ -239,4 +239,48 @@ function generateSizeOptions(category) {
 window.app = {
     updateCartCount,
     handleCheckout
-}; 
+};
+
+// Test product data
+const testProducts = [
+  {
+    id: 1,
+    name: "Classic T-Shirt",
+    price: 29.99,
+    category: "shirts",
+    image: "https://via.placeholder.com/300"
+  },
+  {
+    id: 2,
+    name: "Running Shoes",
+    price: 89.99,
+    category: "shoes",
+    image: "https://via.placeholder.com/300"
+  }
+];
+
+// Function to render products
+function renderProducts(products) {
+  const grid = document.getElementById('products-grid');
+  const template = document.getElementById('product-template');
+  
+  // Clear existing products
+  grid.innerHTML = '';
+  
+  products.forEach(product => {
+    const clone = template.content.cloneNode(true);
+    
+    // Update product details
+    clone.querySelector('.product-image').src = product.image;
+    clone.querySelector('.product-category').textContent = product.category;
+    clone.querySelector('.product-title').textContent = product.name;
+    clone.querySelector('.product-price').textContent = `$${product.price}`;
+    
+    grid.appendChild(clone);
+  });
+}
+
+// Initialize products when page loads
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts(testProducts);
+}); 

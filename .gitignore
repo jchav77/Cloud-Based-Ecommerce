@@ -1,4 +1,4 @@
-# Terraform files
+# Terraform files and state
 *.tfstate
 *.tfstate.backup
 .terraform/
@@ -16,8 +16,8 @@ venv/
 # Ansible temporary files
 *.retry
 
-# System files
-.DS_Store
-
 # Node modules (if using Node)
 node_modules/
+
+# OS generated files
+.DS_Store

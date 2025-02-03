@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Julio's Clothing Shop</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Custom JavaScript (if needed) -->
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <!-- Brand Logo SVG -->
+        <svg class="brand-logo" width="40" height="40" viewBox="0 0 50 50">
+          <path d="M25 0 L50 25 L25 50 L0 25 Z" fill="currentColor" />
+          <path d="M15 25 L35 25 M25 15 L25 35" stroke="white" stroke-width="2" />
+        </svg>
+        <span>Julio's</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li class="dropdown">
+          <a href="#" class="categories-btn">Account <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" id="logout">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Dashboard Main Content -->
+  <main class="dashboard-container" style="padding: 2rem; min-height: calc(100vh - 80px); background: #f0f2f5;">
+    <!-- Dashboard Header -->
+    <section class="dashboard-header" style="text-align: center; margin-bottom: 2rem;">
+      <h1>Welcome, [User's Name]</h1>
+      <p>Here you can view your order history, update your account details, and manage your preferences.</p>
+    </section>
+
+    <!-- Dashboard Cards -->
+    <section class="dashboard-content" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+      <!-- Recent Orders Card -->
+      <div class="dashboard-card" style="background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); flex: 1 1 300px; max-width: 400px;">
+        <h2>Recent Orders</h2>
+        <p>You have no recent orders.</p>
+      </div>
+      <!-- Account Details Card -->
+      <div class="dashboard-card" style="background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); flex: 1 1 300px; max-width: 400px;">
+        <h2>Account Details</h2>
+        <p>Update your personal information and settings.</p>
+      </div>
+      <!-- Wishlist Card (example) -->
+      <div class="dashboard-card" style="background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); flex: 1 1 300px; max-width: 400px;">
+        <h2>Your Wishlist</h2>
+        <p>Your wishlist is empty.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Julio's Clothing Shop offers contemporary fashion with timeless style.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Customer Care</h3>
+        <ul>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Order Status</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Julio's Clothing Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Logout Script -->
+  <script>
+    // Add a simple logout handler.
+    document.getElementById('logout').addEventListener('click', (e) => {
+      e.preventDefault();
+      // Clear any user session data stored locally.
+      localStorage.removeItem('user');
+      localStorage.removeItem('isGuest');
+      // Redirect to the login page.
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
