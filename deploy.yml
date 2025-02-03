@@ -1,0 +1,43 @@
+---
+# deploy.yml
+# ------------------------------------------------------------------
+# This Ansible playbook synchronizes (uploads) your local website files to
+# an AWS S3 bucket using the community.aws.s3_sync module.
+#
+# Requirements:
+#   - The S3 bucket (capstone-ecommerce) must already exist (created by Terraform).
+#   - The community.aws collection must be installed.
+#       (Run: ansible-galaxy collection install community.aws)
+#   - Python libraries boto3 and botocore must be installed.
+#   - AWS credentials must be configured (via AWS_PROFILE or environment variables).
+#
+# Note: This playbook does not set any ACLs. Public access is provided via the bucket policy.
+# ------------------------------------------------------------------
+
+- name: Deploy website files to S3 bucket
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    # S3 bucket name (must match the bucket created by Terraform)
+    bucket_name: "capstone-ecommerce"
+    # Local directory containing your website files.
+    # This example assumes your website files (e.g., index.html, cart.html, css/, js/, etc.)
+    # are in the current directory. Adjust if necessary.
+    file_root: "./"
+    # AWS region where your S3 bucket is located.
+    aws_region: "us-east-1"
+
+  tasks:
+    - name: Synchronize website files to S3 bucket
+      community.aws.s3_sync:
+        bucket: "{{ bucket_name }}"
+        file_root: "{{ file_root }}"
+        key_prefix: ""       # Upload files to the bucket root
+        region: "{{ aws_region }}"
+      register: s3_sync
+
+    - name: Display deployment success message
+      debug:
+        msg: "Website files have been deployed to the S3 bucket '{{ bucket_name }}'."

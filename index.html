@@ -1,164 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julio's Clothing Shop- Contemporary Fashion</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="js/app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Julio's Clothing Shop</title>
+  <!-- Link to your CSS if needed -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Include AWS Amplify from a CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/aws-amplify@4.x/dist/aws-amplify.min.js"></script>
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">
-            <svg class="brand-logo" width="40" height="40" viewBox="0 0 50 50">
-                <path d="M25 0 L50 25 L25 50 L0 25 Z" fill="currentColor"/>
-                <path d="M15 25 L35 25 M25 15 L25 35" stroke="white" stroke-width="2"/>
-            </svg>
-            Julio's ClothingShop
+  <div class="login-container">
+    <div class="login-box">
+      <div class="login-header">
+        <h1>Welcome Back</h1>
+        <p>Please login to your account</p>
+      </div>
+      
+      <form id="login-form" class="login-form">
+        <div class="form-group">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" name="username" placeholder="Username or Email" required>
+          </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="products.html">Shop</a></li>
-            <li class="dropdown">
-                <a href="#" class="categories-btn">Categories <i class="fas fa-chevron-down"></i></a>
-                <div class="dropdown-content">
-                    <a href="products.html?category=shirts">Shirts</a>
-                    <a href="products.html?category=shoes">Shoes</a>
-                    <a href="products.html?category=dresses">Dresses</a>
-                    <a href="products.html?category=accessories">Accessories</a>
-                </div>
-            </li>
-            <li>
-                <a href="cart.html" class="cart-link">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
 
-    <main>
-        <section class="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1>Julio's Clothing Shop</h1>
-                <p>Contemporary Fashion, Timeless Style</p>
-                <div class="hero-buttons">
-                    <a href="products.html" class="cta-button">
-                        <span>Shop Collection</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#featured" class="secondary-button">
-                        <i class="fas fa-star"></i>
-                        <span>View Featured</span>
-                    </a>
-                </div>
-                <div class="hero-features">
-                    <div class="feature">
-                        <i class="fas fa-shipping-fast"></i>
-                        <span>Free Shipping</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-undo"></i>
-                        <span>Easy Returns</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Secure Checkout</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="featured" class="featured-categories">
-            <h2>Shop by Category</h2>
-            <div class="category-grid">
-                <a href="products.html?category=shirts" class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-tshirt"></i>
-                    </div>
-                    <div class="category-content">
-                        <h3>Shirts</h3>
-                        <p>T-Shirts, Dress Shirts & Polos</p>
-                        <span class="category-items">3 Products</span>
-                        <span class="view-more">Shop Now <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <a href="products.html?category=shoes" class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-shoe-prints"></i>
-                    </div>
-                    <div class="category-content">
-                        <h3>Shoes</h3>
-                        <p>Sneakers, Dress Shoes & Heels</p>
-                        <span class="category-items">3 Products</span>
-                        <span class="view-more">Shop Now <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <a href="products.html?category=dresses" class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-female"></i>
-                    </div>
-                    <div class="category-content">
-                        <h3>Dresses</h3>
-                        <p>Evening Gowns & Summer Dresses</p>
-                        <span class="category-items">3 Products</span>
-                        <span class="view-more">Shop Now <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <a href="products.html?category=accessories" class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-glasses"></i>
-                    </div>
-                    <div class="category-content">
-                        <h3>Accessories</h3>
-                        <p>Wallets, Bags & Sunglasses</p>
-                        <span class="category-items">3 Products</span>
-                        <span class="view-more">Shop Now <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section id="featured-products" class="featured-products">
-            <h2>Featured Products</h2>
-            <div class="featured-grid">
-                <!-- Products will be dynamically inserted here -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Julio's Clothing Shop</h3>
-                <p>Contemporary Fashion, Timeless Style</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="products.html">Shop</a></li>
-                    <li><a href="#featured">Categories</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
+        <div class="form-group">
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Julio's Clothing Shop. All rights reserved.</p>
+
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" name="remember">
+            Remember me
+          </label>
+          <a href="#" class="forgot-password">Forgot Password?</a>
         </div>
-    </footer>
+
+        <button type="submit" class="login-button">
+          <span>Login</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <div class="login-footer">
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- AWS Amplify Configuration -->
+  <script>
+    // Configure AWS Amplify with your Cognito settings.
+    // Replace these values with the ones from your Terraform outputs.
+    const awsConfig = {
+      Auth: {
+        region: 'us-east-1', // Your AWS region
+        userPoolId: 'us-east-1_gHwtEoN4t', // Your Cognito User Pool ID
+        userPoolWebClientId: '65foa1spo9hgo0t1hv1fjqfcd3' // Your Cognito App Client ID
+        // Optionally, you can include an oauth block for a hosted UI
+      }
+    };
+
+    // Configure Amplify with the settings above.
+    Amplify.configure(awsConfig);
+
+    // Listen for the form submission to trigger sign in.
+    document.getElementById('login-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      
+      const submitButton = event.target.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        // Use Amplify's Auth.signIn method to sign in the user.
+        const user = await Amplify.Auth.signIn(username, password);
+        submitButton.innerHTML = '<i class="fas fa-check"></i> Success!';
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 1000);
+      } catch (error) {
+        console.error('Error during sign in:', error);
+        submitButton.disabled = false;
+        submitButton.innerHTML = '<span>Login</span><i class="fas fa-arrow-right"></i>';
+        
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'error-message';
+        errorMessage.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${error.message}`;
+        
+        const existingError = document.querySelector('.error-message');
+        if (existingError) {
+          existingError.remove();
+        }
+        
+        document.querySelector('.login-form').insertBefore(
+          errorMessage,
+          document.querySelector('.login-button')
+        );
+      }
+    });
+  </script>
 </body>
-</html> 
+</html>
