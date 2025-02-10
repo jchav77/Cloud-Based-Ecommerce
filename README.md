@@ -75,7 +75,7 @@ A modern, cloud-based e-commerce platform built with AWS services and a responsi
 ### ⚙️ Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/Cloud-Based-Ecommerce.git
+git clone https://github.com/jchav77/Cloud-Based-Ecommerce.git
 ```
 
 2. Install dependencies:
